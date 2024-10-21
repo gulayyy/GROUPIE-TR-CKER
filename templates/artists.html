@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/styles.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupie Trackers</title>
+</head>
+<body>
+    <header class="navbar">
+        <a class="navbartext" href="/">GROUPIE TRACKERS</a>
+    </header> 
+    <div class="container">
+        <a class="artistbox">
+            <h1 class="navbartext">{{.Artist.Name}}</h1>
+            <img class="artistImage" src="{{.Artist.Image}}" alt="{{.Artist.Name}}" />
+            <h2 class="artistText">{{.Artist.Name}}</h2>
+            <p class="artistText">Members: {{range .Artist.Members}}{{.}}, {{end}}</p>
+            <p class="artistText">Creation Date: {{.Artist.CreationDate}}</p>
+            <p class="artistText">First Album: {{.Artist.FirstAlbum}}</p>
+        </a>
+        <a class="artistbox">
+            <p class="artistText"><b>Concerts:</b></p>
+            <ol><!--  Bu etiket bir sıralı liste başlatır. Sıralı listeler, liste öğelerini numaralandırmak için kullanılır. -->
+                </ul><!--Bu etiket bir sıralı listeyi sonlandırır. Tüm sıralı liste öğeleri bu etiketin içinde yer alır. Bu, tarayıcıya sıralı liste oluşturmanın sona erdiğini bildirir.-->
+              </li> {{range $key, $value := .Artist.DateLocations}}<!-- Burda map yapısı içeriisinde döngü oıluşturuluyor key anahtar değeri value ise o anahtarın  değerini temsil eder  -->
+              <li class="artistText" id="placemark">{{$key}}<!-- Burada  her döngüde bir liste olluşturuyor ve map yapısındaki  key değerine denk  gelen değerleri almak için kullanırız -->
+                <ul>{{range $value}}
+                  <li id="dates">{{.}}</li><!-- Tarih bilgisini içeren bir liste öğesi oluşturulur -->
+                  {{end}}
+              {{end}}
+            </ol>
+        </a>
+    </div>
+</body>
+</html>

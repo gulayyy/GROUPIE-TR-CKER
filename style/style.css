@@ -1,0 +1,118 @@
+body{
+    font-family: Arial, sans-serif;/*bu işlem yazı tipi ariel olmazsa otomatik olarak sans-serif olmasını sağlıyor*/
+    background-color: #1e1e1e ;
+    margin: 0;/*tarayıcının varsayılan boşlukları koymasını engeller*/
+    padding: 0;
+}
+/*
+#1E1E1E
+#737373
+#666666 
+#E0E0E0
+#9370DB 
+#8A2BE2
+#9932CC
+#FAEBD7
+*/
+.container {
+    display: grid;/*css ızgarası olarak düzenlemesini sağlar*/
+    grid-template-columns: repeat(3, 1fr);/*sütun sayısını belirler burda 3 sütuna ayırmamızı ve 1fr ile eşit genişlikte olmasını sağlar */
+    gap: 15px;/*ızgaralar arasındaki boşluk değerini belirler*/
+    margin-left: 20px;
+    margin: center;
+}
+.navbar{
+    width: 100%;
+    background-color: #737373;
+    padding-top: 0;/*iç boşluğu sıfırlar*/
+    margin-top: 0;/*dış boşluğu sıfırlar*/
+    height: 80px;
+    padding-top: 30px;
+    text-decoration: none;/*metinlerdeki alt çizgiyi kaldırır*/
+    text-align: center;
+    font-size: x-large;
+    color: black;
+}
+.box {
+    display: inline-block;/*ızgaraların blok blok yan yana dizilmesini sağlar*/
+    width: 400px;
+    height: 400px;
+    background-color: #666666;
+    border: 1px solid gray;/*kenarlık eklemek için kullanılır 1px boyutunda*/
+    text-decoration: none;
+    margin-left: 20px;
+    margin: 50px;/*dört kenara da 50px lik boşluk bırakır*/
+    padding: auto;
+    border-radius: 5px;/*kenarlıklara yuvarlaklık eklemek için kullanılır*/
+    transition: background-color 0.3s ease;/*arka plan rengi değiştiğinde yumuşak bir geçiş ile geçilmesini sağlar 0.3 süresi ile geçiş sağlar*/
+    color: black;
+}
+.box:hover{
+    background-color: #E0E0E0;
+}
+.image{
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+.boxtext{
+    margin: center;
+    padding: auto;/*iç boşluğu otomatik olarak ayarlar*/
+}
+.button {
+    width: 100px;
+    height: 150px;
+    display: inline-block;
+    background-color: gray;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+   background-color: #007bff;
+}
+.button{
+    color: black;
+}
+.textcenter{
+    text-align: center;
+    text-decoration: none;
+}
+.artistbox{
+    display: inline-block;
+    width: 450px;
+    height: 85%;
+    background-color: #666666;
+    border: 1px solid gray;/*1px geniişliğinde ve gri renginde bir kenarlık eklemek için kullanılır*/
+    text-decoration: none;
+    margin-left: 20px;
+    margin: 50px;
+    padding: auto;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    color: black;
+}
+.artistImage{
+    width: 300px;
+    height: 300px;
+    margin-left: 75px;
+    margin-top: 50px;
+}
+.artistText{
+    color: white;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: large;
+    text-align: center;
+}
+.navbartext{
+    color: white;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: xx-large;
+    text-align: center;
+}
